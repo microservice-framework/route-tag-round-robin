@@ -1,0 +1,23 @@
+{
+  "name": "@microservice-framework/route-tag-round-robin",
+  "version": "1.0.0",
+  "description": "Provide tag 'round-robin'. Easy to use tag that vote to route traffic to next tagged as a round-robin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cs": "eslint --fix index.js includes/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microservice-framework/route-tag-round-robin.git"
+  },
+  "author": "Gormartsen",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/microservice-framework/route-tag-round-robin/issues"
+  },
+  "homepage": "https://github.com/microservice-framework/route-tag-round-robin#readme",
+  "dependencies": {
+    "debug": "^2.2.0"
+  }
+}
