@@ -22,7 +22,7 @@ module.exports = {
         taggedTargets[i].vote += voteSize
         return
       }
-      if(latestProcessedRoute.endpointUrl == taggedTargets[i].endpointUrl) {
+      if(latestProcessedRoute.id == taggedTargets[i].id) {
         if(i < taggedTargets.length - 1) {
           latestProcessedRoute = taggedTargets[i+1]
         } else {
@@ -31,8 +31,13 @@ module.exports = {
         latestProcessedRoute.vote += voteSize
         debug.debug('Applied vote:%d (total: %d) to %O',voteSize, latestProcessedRoute.vote,
           latestProcessedRoute)
+        return
         
       }      
+    }
+    if(latestProcessedRoute && taggedTargets.length) {
+      // If we are here, then latestProcessedRoute was removed from the allTargets list
+      latestProcessedRoute = taggedTargets[0]
     }
   }
 }
